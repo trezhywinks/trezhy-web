@@ -2,11 +2,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <title>TrezhyWinks</title>
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 </head>
 <style>
 *{margin: 0; padding: 0;}
 body{background: #000; color: #fff; font-size: 20px;}
+
 .top{
 position: fixed;
 top: 0;
@@ -17,6 +21,16 @@ border-bottom: 1px solid #131313;
 display: flex;
 justify-content: space-between;
 }
+
+a{
+text-decoration: none; color: #fff; font-weight: 600; font-size: 17px;
+}
+
+.life{
+width: 230px;  display: flex; padding: 10px;
+}
+
+.lifes{ margin-left: 10px;}
 
 .trezhywinks{
 margin-top: -30px;
@@ -34,13 +48,23 @@ width: 10px;
 cursor: pointer;
 }
 
+.bx{
+font-size: 25px;
+}
+
 .back{
 background-image:url("https://raw.githubusercontent.com/trezhywinks/trezhy-web/refs/heads/main/git-img/70788.webp");
 height: 20vh;
 background-position: center center;
 background-size: cover;
 background-repeat: not-repeat;
+border-bottom: 4px solid #121212;
 }
+
+.chove{ display: flex;}
+
+.amn{margin-left: 20px; margin-top: 55px;}
+.ty{margin-top: -40px;}
 </style>
 <body>
 <div class="top">
@@ -55,9 +79,47 @@ background-repeat: not-repeat;
 </div><br><br>
 <div class="back"></div>
 <div class="trezhywinks">
-<img src="https://avatars.githubusercontent.com/u/205466886?v=4" style="border: 5px solid  #121212;" width="120" class="trezhywinks">
-<br><br>
+<div class="chove">
+<div class="tes">
+<img src="https://avatars.githubusercontent.com/u/205466886?v=4" style="border: 5px solid  #121212;" width="120" class="trezhywinks ty">
+</div>
+<div class="amn">
 <strong style="margin: 10px;">Trezhywinks<strong>
+</div>
+</div>
+
+<div class="life">
+<div class="inocons">
+<i class='bx bxl-instagram-alt'></i>
+</div>
+
+<div class="lifes">
+<a href="https://www.instagram.com/@dream._.9595">@dream._.9595</a>
+</div>
+</div>
+
+<div class="life">
+<div class="inocons">
+<i class='bx bxl-github' style='color:#ffffff'  ></i>
+</div>
+
+<div class="lifes">
+<a href="https://www.instagram.com/@dream._.9595">trezhywinks</a>
+</div>
+</div>
+
+<div class="life">
+<div class="inocons">
+<i class='bx bxl-whatsapp' style='color:#ffffff'  ></i>
+</div>
+
+<div class="lifes">
+<a href="https://www.instagram.com/@dream._.9595">WhatsApp</a>
+</div>
+</div>
+
+
+
 </div>
 </body>
 </html>
