@@ -1,4 +1,4 @@
--<html lang="en-US">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,7 @@ background: #121212;
 border-bottom: 1px solid #131313;
 display: flex;
 justify-content: space-between;
+z-index: 9;
 }
 
 a{
@@ -66,6 +67,27 @@ background-repeat: not-repeat;
 border-bottom: 4px solid #121212;
 }
 
+.ret{
+margin-top: 20px;
+background-image: url("https://c4.wallpaperflare.com/wallpaper/439/731/824/anime-girls-hatsune-miku-moon-night-wallpaper-preview.jpg");
+backgroound-position: center center;
+height: 30vh;
+background-repeat: no-repeat;
+background-size: cover;
+animation: --server 3s infinite linear;
+}
+
+@keyframes --server{
+10%{
+border-top-right-radius: 0px;
+border-bottom-left-radius: 50px;
+}
+30%{
+border-bottom-left-radius: 0px;
+border-top-right-radius: 50px;
+}
+}
+
 .chove{ display: flex; width: 100%;}
 
 .amn{margin-left: 5px; width: 100%; margin-top: -4px;}
@@ -102,14 +124,81 @@ border-radius: 100px;
 border: none; 
 }
 
+.hom{
+position: fixed;
+left: 0; right:-450px; top: 0; background: #121212;
+height: 100vh;
+z-index: 8;
+display: none;
+transition: 4s;
+animation: --home 0.5s ease-in;
+}
+
+@keyframes --home{
+0%{
+right: -450px;
+}
+100%{
+right: 0px;
+}
+}
+
+.cdl{
+color: red;
+font-size: 17px;
+}
+
+.toolshe{
+padding: 10px;
+}
+.ver{
+margin: 10px;
+}
 </style>
 <body>
+<div class="hom">
+<div class="toolshe">
+<br>
+<div class="ret">
+<div class="ver">
+<h3 style="opacity: 0.5">Hatsune Winks - WEB</h3>
+<p style="font-size: 16px; opacity: 0.5;">version 1.0.99</p>
+</div>
+</div>
+<br>
+<center>
+<p style="font-size: 13px; opacity: 0.3;">created with love by trezhywinks and dreqxy.</p>
+<br>
+<i class='bx bxl-github' style='color:#ffffff'  ></i>
+<i class='bx bxl-whatsapp' style='color:#ffffff'  ></i>
+<i class='bx bxl-instagram-alt'></i>
+
+</center>
+</div>
+</div>
+
 <div class="top">
 
-<div class="name"><h2>RedWinks Web</h2></div>
+<div class="name"><h3>Hatsune Winks</h3></div>
 
 <div class="home">
 <button class="calor">Home</button>
+<script>
+document.querySelector('.home').addEventListener('click', () => {
+    const carr = document.querySelector('.hom');
+    const leftValue = window.getComputedStyle(carr).right;
+
+    if (leftValue === "0px") {
+        carr.style.right = "-450px";
+        carr.style.display = "none";
+        carr.style.transition = "0.7s";
+    } else {
+        carr.style.right = "0px";
+        carr.style.display = "inline";
+    }
+});
+</script>
+
 <div class="lineu"></div>
 <div class="lineu"></div>
 <div class="lineu"></div>
@@ -124,7 +213,7 @@ border: none;
 <div class="balao"></div>
 <div class="amn">
 <strong style="margin: 10px;">Trezhywinks<strong>
-<p style="font-size: 15px; margin-left: 10px;">Welcome user!</p>
+<p style="font-size: 14px; opacity:0.4; margin-left: 10px;">Welcome user!</p>
 </div>
 </div>
 
