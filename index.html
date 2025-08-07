@@ -6,8 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <title>Trezhy Web</title>
- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
 </head>
 <style>
 *{margin: 0; padding: 0; box-sizing: border-box;}
@@ -278,8 +276,14 @@ z-index: 9;
 }
 
 .bx-play{
+display: inline;
 font-size: 38px;
 margin-left: -8px;
+}
+
+.bx-pause{
+display: none;
+font-size: 38px; margin-left: -8px;
 }
 
 .alors{
@@ -287,15 +291,16 @@ margin-top: 6px; margin-left: 5px;
 }
 
 .lins{
+width: 220px;
 animation: --essamina 5s infinite linear;
 }
 
 @keyframes --essamina{
 from{
-transform: translateX(270px);
+transform: translateX(390px);
 }
 to{
-transform: translateX(-210px);
+transform: translateX(-390px);
 }
 }
 
@@ -325,13 +330,29 @@ the devil would cry if he saw her die in his dreams
 </div>
 <div class="alors">
 <div class="lins">
-<p style="font-size: 14px;">
-ALORS BRAZIL - SLOWED</p>
+<p style="font-size: 14px; white-space: nowrap;">
+All I want - Live At The Flowerpot, kentish Town</p>
 </div>
 </div>
 </div>
 <i class='bx bx-play' style='color:#ffffff;'></i>
+<i class='bx bx-pause' style='color:#ffffff' ></i>
 </div>
+<script>
+document.querySelector(".msi").addEventListener('click', () => {
+const bx = document.querySelector(".bx-play");
+const pause = document.querySelector(".bx-pause");
+    const noneValue = window.getComputedStyle(bx).display;
+if (noneValue === "inline"){
+pause.style.display = "inline";
+bx.style.display = "none";
+} else {
+pause.style.display = "none";  
+bx.style.display = "inline";
+
+}
+})
+</script>
 </div>
 
 </div>
@@ -383,5 +404,6 @@ WELCOME TO TREZHYWEB!
 <img src="https://github.githubassets.com/assets/mona-loading-dark-7701a7b97370.gif" width="80"/>
 </div>
 </div>
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
